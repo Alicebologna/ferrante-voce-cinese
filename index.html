@@ -6,83 +6,141 @@
   <title>费兰特在中国：读者采访 · Elena Ferrante in Cina: interviste ai lettori</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      margin: 2em;
+      font-family: "宋体", SimSun, "Times New Roman", Times, serif;
+      background: #f9f9f9;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #1a1a1a;
+      color: #fff;
+      padding: 2em;
+      text-align: center;
+      font-family: "宋体", SimSun, "Times New Roman", Times, serif;
+    }
+    header h1 {
+      margin: 0.3em 0;
+      font-size: 1.4em;
+      line-height: 1.4;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 2em;
+      font-family: "宋体", SimSun, "Times New Roman", Times, serif;
     }
     .lang-select {
+      margin: 1em 0;
+      text-align: center;
+    }
+    select {
+      padding: 0.5em;
+      font-size: 1em;
+      font-family: "宋体", SimSun, "Times New Roman", Times, serif;
+    }
+    a {
+      color: #0055aa;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    section {
+      background: #fff;
+      padding: 2em;
       margin-bottom: 2em;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      font-family: "宋体", SimSun, "Times New Roman", Times, serif;
+    }
+    h2 {
+      font-size: 1.2em;
+      color: #444;
     }
     iframe {
-      border: none;
       width: 100%;
       height: 700px;
+      border: none;
+      margin-top: 1em;
     }
   </style>
 </head>
 <body>
-  <h1>费兰特在中国：读者采访 · Elena Ferrante in Cina: interviste ai lettori</h1>
+  <header>
+    <h1>费兰特在中国：读者采访</h1>
+    <h1>Elena Ferrante in Cina: interviste ai lettori</h1>
+  </header>
 
-  <div class="lang-select">
-    <label for="lang">选择语言 / Seleziona lingua / Choose language: </label>
-    <select id="lang" onchange="changeLanguage()">
-      <option value="zh">中文</option>
-      <option value="it">Italiano</option>
-      <option value="en">English</option>
-    </select>
+  <div class="container">
+    <div class="lang-select">
+      <label for="lang">选择语言 / Seleziona lingua / Choose language: </label>
+      <select id="lang" onchange="changeLanguage()">
+        <option value="zh">中文</option>
+        <option value="it">Italiano</option>
+        <option value="en">English</option>
+      </select>
+    </div>
+
+    <section id="content">
+      <p>感谢您参与本研究！请点击下方链接填写问卷：</p>
+      <p><a href="https://forms.cloud.microsoft/e/U3YjYPLF1f?origin=lprLink" target="_blank">进入问卷</a></p>
+    </section>
+
+    <section id="intro"></section>
+    <section id="researcher"></section>
   </div>
-
-  <div id="content">
-    <!-- 默认中文内容 -->
-    <p>感谢您参与本研究！请点击下方链接填写问卷：</p>
-    <p><a href="https://forms.cloud.microsoft/e/U3YjYPLF1f?origin=lprLink" target="_blank">进入问卷</a></p>
-  </div>
-
-  <hr>
-  <h2>📘 项目简介 / Descrizione del progetto / Project Overview</h2>
-  <p><strong>中文：</strong><br>
-  《费兰特在中国：姐妹情谊的书写、传递与重塑》是一项关于意大利作家埃莱娜·费兰特（Elena Ferrante）小说在中国的译介、接受与影响的学术研究。本系列采访是该研究的重要组成部分，聚焦中国读者的阅读经验与情感反应，探索“姐妹情谊”这一核心主题如何在跨文化语境中被理解、传达与改写。</p> 
-
-  <p><strong>Italiano：</strong><br>
-  "Ferrante in Cina: scrittura, trasmissione e rielaborazione della sorellanza" è una ricerca accademica sull'introduzione, la ricezione e l'impatto dei romanzi ferrantiani in Cina. Il progetto si concentra sull'esperienza di lettura delle lettrici e dei lettori  cinesi e su come il tema della sorellanza venga recepito e trasformato in un contesto interculturale.</p> 
-
-  <p><strong>English:</strong><br>
-  “Ferrante in China: Writing, Transmission, and Reinterpretation of Sisterhood” is an academic study on the translation, reception, and cultural reinterpretation of Ferrante’s novels in China. The project focuses on Chinese readers’ experiences and how the theme of sisterhood is understood and reimagined across cultures.</p> 
-
-  <hr>
-  <h2>👩‍🎓 项目负责人 / Ricercatrice / Researcher</h2>
-  <p><strong>中文：</strong><br>
-  张燕燕，摩德纳与雷焦艾米利亚大学语言与文化系博士生。研究兴趣有意大利当代文学、女性主义批评、翻译研究、海洋文学。合译有《一个不属于我的名字》《成年人的谎言生活》《寻找伊莎贝尔》《最后的灯塔》等。</p> 
-
-  <p><strong>Italiano：</strong><br>
-  Zhang Yanyan, dottoranda in Scienze Umanistiche presso il Dipartimento di Studi Linguistici e Culturali dell’Università di Modena e Reggio Emilia.
-I suoi interessi di ricerca comprendono letteratura italiana contemporanea, critica letteraria, studi della traduzione letteraria e la letteratura di mare. Opere tradotte: "Un nome che non è il mio", "La vita bugiarda degli adulti", "Per Isabel. Un mandala", "L'ultimo faro".</p> 
-
-  <p><strong>English:</strong><br>
-  Zhang Yanyan, PhD candidate in Humanities at the Department of Linguistic and Cultural Studies, University of Modena and Reggio Emilia. Her research interests include contemporary Italian literature, literary criticism, literary translation, and ocean literature. Translated works: "Un nome che non è il mio", "La vita bugiarda degli adulti", "Per Isabel. Un mandala", "L'ultimo faro".</p>
 
   <script>
     function changeLanguage() {
       const lang = document.getElementById('lang').value;
       const content = document.getElementById('content');
+      const intro = document.getElementById('intro');
+      const researcher = document.getElementById('researcher');
 
       if (lang === 'zh') {
         content.innerHTML = `
           <p>感谢您参与本研究！请点击下方链接填写问卷：</p>
           <p><a href="https://forms.cloud.microsoft/e/U3YjYPLF1f?origin=lprLink" target="_blank">进入问卷</a></p>
         `;
+        intro.innerHTML = `
+          <h2>📘 项目简介</h2>
+          <p>《费兰特在中国：姐妹情谊的书写、传递与重塑》是一项关于意大利作家埃莱娜·费兰特（Elena Ferrante）小说在中国的译介、接受与影响的学术研究。本系列采访是该研究的重要组成部分，聚焦中国读者的阅读经验与情感反应，探索“姐妹情谊”这一核心主题如何在跨文化语境中被理解、传达与改写。</p>
+        `;
+        researcher.innerHTML = `
+          <h2>👩‍🎓 项目负责人</h2>
+          <p>张燕燕，摩德纳与雷焦艾米利亚大学语言与文化系博士生。研究兴趣有意大利当代文学、女性主义批评、翻译研究、海洋文学。合译有《一个不属于我的名字》《成年人的谎言生活》《寻找伊莎贝尔》《最后的灯塔》等。</p>
+        `;
       } else if (lang === 'it') {
         content.innerHTML = `
           <p>Grazie per aver partecipato alla nostra ricerca! Clicca il link qui sotto per compilare il questionario:</p>
           <p><a href="https://forms.cloud.microsoft/e/U3YjYPLF1f?origin=lprLink" target="_blank">Vai al questionario</a></p>
+        `;
+        intro.innerHTML = `
+          <h2>📘 Descrizione del progetto</h2>
+          <p>"Ferrante in Cina: scrittura, trasmissione e rielaborazione della sorellanza" è una ricerca accademica sull'introduzione, la ricezione e l'impatto dei romanzi ferrantiani in Cina. Il progetto si concentra sull'esperienza di lettura delle lettrici e dei lettori cinesi e su come il tema della sorellanza venga recepito e trasformato in un contesto interculturale.</p>
+        `;
+        researcher.innerHTML = `
+          <h2>👩‍🎓 Ricercatrice</h2>
+          <p>Zhang Yanyan, dottoranda in Scienze Umanistiche presso il Dipartimento di Studi Linguistici e Culturali dell’Università di Modena e Reggio Emilia. I suoi interessi di ricerca comprendono letteratura italiana contemporanea, critica letteraria, studi della traduzione letteraria e la letteratura di mare. Opere tradotte: "Un nome che non è il mio", "La vita bugiarda degli adulti", "Per Isabel. Un mandala", "L'ultimo faro".</p>
         `;
       } else if (lang === 'en') {
         content.innerHTML = `
           <p>Thank you for participating in our research! Please click the link below to fill out the questionnaire:</p>
           <p><a href="https://forms.cloud.microsoft/e/U3YjYPLF1f?origin=lprLink" target="_blank">Go to the questionnaire</a></p>
         `;
+        intro.innerHTML = `
+          <h2>📘 Project Overview</h2>
+          <p>“Ferrante in China: Writing, Transmission, and Reinterpretation of Sisterhood” is an academic study on the translation, reception, and cultural reinterpretation of Ferrante’s novels in China. The project focuses on Chinese readers’ experiences and how the theme of sisterhood is understood and reimagined across cultures.</p>
+        `;
+        researcher.innerHTML = `
+          <h2>👩‍🎓 Researcher</h2>
+          <p>Zhang Yanyan, PhD candidate in Humanities at the Department of Linguistic and Cultural Studies, University of Modena and Reggio Emilia. Her research interests include contemporary Italian literature, literary criticism, literary translation, and ocean literature. Translated works: "Un nome che non è il mio", "La vita bugiarda degli adulti", "Per Isabel. Un mandala", "L'ultimo faro".</p>
+        `;
       }
     }
+
+    window.onload = changeLanguage;
   </script>
 </body>
 </html>
