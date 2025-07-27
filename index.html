@@ -26,7 +26,7 @@
       line-height: 1.4em;
       color: #ffffff;
       font-weight: bold;
-      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
     }
     .container {
       max-width: 960px;
@@ -58,12 +58,6 @@
       background-color: #416b99;
       transform: translateY(-3px);
     }
-    .form-intro {
-      margin-top: 4em;
-      font-size: 1.1em;
-      font-weight: bold;
-      color: #1F4E79;
-    }
     footer {
       margin-top: 4em;
       padding: 2em 1em;
@@ -74,7 +68,7 @@
     }
     @media (max-width: 600px) {
       header {
-        background-position: 60% 80%;
+        background-position: 60% 50%;
       }
       header h1 {
         font-size: 1.5em;
@@ -106,7 +100,7 @@
     <h2><i class="fas fa-user-graduate"></i> <span id="section-title-researcher"></span></h2>
     <div id="section-researcher"></div>
 
-    <div id="form-content" style="text-align: center;"></div>
+    <div id="form-content" style="text-align: center; margin-top: 3em;"></div>
   </div>
 
   <footer id="footer">
@@ -116,7 +110,7 @@
     </div>
     <div id="footer-it" style="display:none">
       Email di contatto: <strong><a href="mailto:yanyan.zhang@unimore.it">yanyan.zhang@unimore.it</a></strong><br>
-      Termine per partecipare all’intervista: 25 agosto 2025, ore 23:45 (ora di Roma)
+      Termine dell’intervista: 25 agosto 2025, ore 23:45 (ora di Roma)
     </div>
     <div id="footer-en" style="display:none">
       Contact email: <strong><a href="mailto:yanyan.zhang@unimore.it">yanyan.zhang@unimore.it</a></strong><br>
@@ -127,25 +121,25 @@
   <script>
     const contentMap = {
       zh: {
-        form: `<p class="form-intro">感谢您参与本研究！<br>请点击下方按钮参与采访：</p><a class="form-button" href="https://forms.cloud.microsoft/e/U3YjYPLF1f?origin=lprLink" target="_blank">参与采访</a>`,
+        form: `<p style="font-weight:bold; font-size:1.1em; color:#1F4E79;">感谢您参与本研究！<br>请点击下方按钮参与采访：</p><a class="form-button" href="https://forms.cloud.microsoft/e/U3YjYPLF1f?origin=lprLink" target="_blank">参与采访</a>`,
         projectTitle: "项目简介",
         researcherTitle: "项目负责人",
         project: `《费兰特在中国：姐妹情谊的书写、传递与重塑》是一项关于意大利作家埃莱娜·费兰特（Elena Ferrante）小说在中国的译介、接受与影响的学术研究。本页面邀请费兰特的中国读者，尤其是女性读者参与这场叙述性采访，分享您对费兰特作品的阅读经验与情感共鸣，共同参与探索“姐妹情谊”这一主题在跨文化语境中的理解、传递与重塑。您的声音将成为研究的重要组成部分。`,
         researcher: `张燕燕，摩德纳与雷焦艾米利亚大学语言与文化系博士生。研究兴趣有意大利当代文学、文学批评、翻译研究、海洋文学。合译有《一个不属于我的名字》《成年人的谎言生活》《寻找伊莎贝尔》《最后的灯塔》等。`
       },
       it: {
-        form: `<p class="form-intro">Grazie per aver partecipato alla nostra ricerca!<br>Clicca il bottone qui sotto per partecipare all’intervista:</p><a class="form-button" href="https://forms.cloud.microsoft/e/U3YjYPLF1f?origin=lprLink" target="_blank">Partecipa all’intervista</a>`,
+        form: `<p style="font-weight:bold; font-size:1.1em; color:#1F4E79;">Grazie per aver partecipato alla nostra ricerca!<br>Clicca il bottone qui sotto per partecipare all’intervista:</p><a class="form-button" href="https://forms.cloud.microsoft/e/U3YjYPLF1f?origin=lprLink" target="_blank">Partecipa all’intervista</a>`,
         projectTitle: "Descrizione del progetto",
         researcherTitle: "Ricercatrice",
-        project: `*Ferrante in Cina: scrittura, trasmissione e rielaborazione della sorellanza* è uno studio accademico sull’introduzione, la ricezione e l’impatto dei romanzi di Elena Ferrante in Cina. Questa pagina invita i lettori cinesi di Ferrante, in particolare le lettrici, a partecipare a un’intervista narrativa per condividere le proprie esperienze di lettura ed emozioni legate alle opere dell’autrice. Insieme esploreremo come il tema della sorellanza venga compreso, trasmesso e rielaborato in un contesto interculturale. La tua voce sarà una parte fondamentale di questa ricerca.`,
-        researcher: `Zhang Yanyan, dottoranda in Scienze Umanistiche presso il Dipartimento di Studi Linguistici e Culturali dell’Università di Modena e Reggio Emilia. I suoi interessi di ricerca comprendono letteratura italiana contemporanea, critica letteraria, studi della traduzione letteraria e la letteratura di mare. Opere tradotte: *Un nome che non è il mio*, *La vita bugiarda degli adulti*, *Per Isabel. Un mandala*, *L'ultimo faro*.`
+        project: `Ferrantiani in Cina. Questa pagina invita i lettori cinesi di Ferrante, in particolare le lettrici, a partecipare a un’intervista narrativa per condividere le proprie esperienze di lettura ed emozioni legate alle opere dell’autrice. Insieme esploreremo come il tema della sorellanza venga compreso, trasmesso e rielaborato in un contesto interculturale. La tua voce sarà una parte fondamentale di questa ricerca.`,
+        researcher: `Zhang Yanyan, dottoranda in Scienze Umanistiche presso il Dipartimento di Studi Linguistici e Culturali dell’Università di Modena e Reggio Emilia. I suoi interessi di ricerca comprendono letteratura italiana contemporanea, critica letteraria, studi della traduzione letteraria e la letteratura di mare. Opere tradotte: <em>Un nome che non è il mio</em>, <em>La vita bugiarda degli adulti</em>, <em>Per Isabel. Un mandala</em>, <em>L'ultimo faro</em>.`
       },
       en: {
-        form: `<p class="form-intro">Thank you for participating in our research!<br>Please click the button below to join the interview:</p><a class="form-button" href="https://forms.cloud.microsoft/e/U3YjYPLF1f?origin=lprLink" target="_blank">Join the interview</a>`,
+        form: `<p style="font-weight:bold; font-size:1.1em; color:#1F4E79;">Thank you for participating in our research!<br>Please click the button below to join the interview:</p><a class="form-button" href="https://forms.cloud.microsoft/e/U3YjYPLF1f?origin=lprLink" target="_blank">Join the interview</a>`,
         projectTitle: "Project Overview",
         researcherTitle: "Researcher",
-        project: `*Ferrante in China: Writing, Transmission, and Reinterpretation of Sisterhood* is an academic study on the translation, reception, and cultural reinterpretation of Ferrante’s novels in China. This page invites Chinese readers of Ferrante—especially women—to participate in a narrative interview to share their reading experiences and emotional resonance with the author’s works. Together, we will explore how the theme of sisterhood is understood, conveyed, and reimagined across cultural contexts. Your voice will be an essential part of this research.`,
-        researcher: `Zhang Yanyan, PhD candidate in Humanities at the Department of Linguistic and Cultural Studies, University of Modena and Reggio Emilia. Her research interests include contemporary Italian literature, literary criticism, literary translation, and ocean literature. Translated works: *Un nome che non è il mio*, *La vita bugiarda degli adulti*, *Per Isabel. Un mandala*, *L'ultimo faro*.`
+        project: `<em>Ferrante in China: Writing, Transmission, and Reinterpretation of Sisterhood</em> is an academic study on the translation, reception, and cultural reinterpretation of Ferrante’s novels in China. The project focuses on Chinese readers’ experiences and how the theme of sisterhood is understood and reimagined across cultures.`,
+        researcher: `Zhang Yanyan, PhD candidate in Humanities at the Department of Linguistic and Cultural Studies, University of Modena and Reggio Emilia. Her research interests include contemporary Italian literature, literary criticism, literary translation, and ocean literature. Translated works: <em>Un nome che non è il mio</em>, <em>La vita bugiarda degli adulti</em>, <em>Per Isabel. Un mandala</em>, <em>L'ultimo faro</em>.`
       }
     };
 
