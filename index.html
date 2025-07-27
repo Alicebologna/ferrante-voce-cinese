@@ -22,14 +22,14 @@
     }
     @media (max-width: 600px) {
       header {
-        background-position: 75% 50%; /* 右移并减少底部 */
+        background-position: right 80% bottom 50%;
       }
     }
     header h1 {
       font-size: 2em;
       margin: 0;
       line-height: 1.4em;
-      color: #f4f4f4; /* 柔和白色 */
+      color: #f2f2f2;
       font-weight: bold;
       text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
     }
@@ -46,13 +46,6 @@
       margin-top: 2em;
       color: #1F4E79;
     }
-    .form-text {
-      font-size: 1.1em;
-      font-weight: bold;
-      color: #1F4E79;
-      margin-top: 4em;
-      line-height: 1.4; /* 恢复正常行距 */
-    }
     .form-button {
       display: inline-block;
       background-color: #5B8CBF;
@@ -68,6 +61,12 @@
     .form-button:hover {
       background-color: #416b99;
       transform: translateY(-3px);
+    }
+    .form-desc {
+      color: #1F4E79;
+      font-weight: bold;
+      font-size: 1.1em;
+      margin-bottom: -0.5em;
     }
     footer {
       margin-top: 4em;
@@ -108,7 +107,7 @@
     <h2><i class="fas fa-user-graduate"></i> <span id="section-title-researcher"></span></h2>
     <div id="section-researcher"></div>
 
-    <div id="form-content" style="text-align: center;"></div>
+    <div id="form-content" style="text-align: center; margin-top: 3em;"></div>
   </div>
 
   <footer id="footer">
@@ -118,7 +117,7 @@
     </div>
     <div id="footer-it" style="display:none">
       Email di contatto: <strong><a href="mailto:yanyan.zhang@unimore.it">yanyan.zhang@unimore.it</a></strong><br>
-      Termine per partecipare: 25 agosto 2025, ore 23:45 (ora di Roma)
+      Termine per l’intervista: 25 agosto 2025, ore 23:45 (ora di Roma)
     </div>
     <div id="footer-en" style="display:none">
       Contact email: <strong><a href="mailto:yanyan.zhang@unimore.it">yanyan.zhang@unimore.it</a></strong><br>
@@ -129,21 +128,27 @@
   <script>
     const contentMap = {
       zh: {
-        form: `<div class="form-text">感谢您参与本研究！<br>请点击下方按钮参与采访：</div><a class="form-button" href="https://forms.cloud.microsoft/e/U3YjYPLF1f?origin=lprLink" target="_blank">进入问卷</a>`,
+        form: `<p class="form-desc">感谢您参与本研究！</p>
+               <p class="form-desc">请点击下方按钮参与采访</p>
+               <a class="form-button" href="https://forms.cloud.microsoft/e/U3YjYPLF1f?origin=lprLink" target="_blank">参与采访</a>`,
         projectTitle: "项目简介",
         researcherTitle: "项目负责人",
         project: `《费兰特在中国：姐妹情谊的书写、传递与重塑》是一项关于意大利作家埃莱娜·费兰特（Elena Ferrante）小说在中国的译介、接受与影响的学术研究。本采访是该研究的重要组成部分，聚焦中国读者的阅读经验与情感反应，探索“姐妹情谊”这一主题如何在跨文化语境中被理解、传递与重塑。`,
         researcher: `张燕燕，摩德纳与雷焦艾米利亚大学语言与文化系博士生。研究兴趣有意大利当代文学、文学批评、翻译研究、海洋文学。合译有《一个不属于我的名字》《成年人的谎言生活》《寻找伊莎贝尔》《最后的灯塔》等。`
       },
       it: {
-        form: `<div class="form-text">Grazie per aver partecipato alla nostra ricerca!<br>Clicca il bottone qui sotto per partecipare all’intervista:</div><a class="form-button" href="https://forms.cloud.microsoft/e/U3YjYPLF1f?origin=lprLink" target="_blank">Vai al questionario</a>`,
+        form: `<p class="form-desc">Grazie per aver partecipato alla nostra ricerca!</p>
+               <p class="form-desc">Clicca il bottone qui sotto per partecipare all’intervista</p>
+               <a class="form-button" href="https://forms.cloud.microsoft/e/U3YjYPLF1f?origin=lprLink" target="_blank">Partecipa all’intervista</a>`,
         projectTitle: "Descrizione del progetto",
         researcherTitle: "Ricercatrice",
         project: `<em>Ferrante in Cina: scrittura, trasmissione e rielaborazione della sorellanza</em> è una ricerca accademica sull'introduzione, la ricezione e l'impatto dei romanzi ferrantiani in Cina. Il progetto si concentra sull'esperienza di lettura delle lettrici e dei lettori cinesi e su come il tema della sorellanza venga recepito e trasformato in un contesto interculturale.`,
         researcher: `Zhang Yanyan, dottoranda in Scienze Umanistiche presso il Dipartimento di Studi Linguistici e Culturali dell’Università di Modena e Reggio Emilia. I suoi interessi di ricerca comprendono letteratura italiana contemporanea, critica letteraria, studi della traduzione letteraria e la letteratura di mare. Opere tradotte: <em>Un nome che non è il mio</em>, <em>La vita bugiarda degli adulti</em>, <em>Per Isabel. Un mandala</em>, <em>L'ultimo faro</em>.`
       },
       en: {
-        form: `<div class="form-text">Thank you for participating in our research!<br>Please click the button below to join the interview:</div><a class="form-button" href="https://forms.cloud.microsoft/e/U3YjYPLF1f?origin=lprLink" target="_blank">Go to the questionnaire</a>`,
+        form: `<p class="form-desc">Thank you for participating in our research!</p>
+               <p class="form-desc">Please click the button below to participate in the interview</p>
+               <a class="form-button" href="https://forms.cloud.microsoft/e/U3YjYPLF1f?origin=lprLink" target="_blank">Participate in the interview</a>`,
         projectTitle: "Project Overview",
         researcherTitle: "Researcher",
         project: `<em>Ferrante in China: Writing, Transmission, and Reinterpretation of Sisterhood</em> is an academic study on the translation, reception, and cultural reinterpretation of Ferrante’s novels in China. The project focuses on Chinese readers’ experiences and how the theme of sisterhood is understood and reimagined across cultures.`,
