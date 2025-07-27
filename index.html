@@ -16,7 +16,7 @@
     header {
       background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url("vesuvio.jpg");
       background-size: cover;
-      background-position: center 30%; /* 电脑上将图片向上偏移以显示更多大海 */
+      background-position: center 80%; /* 改动：下移图片，显示大海和火山 */
       padding: 4em 2em;
       text-align: center;
     }
@@ -24,7 +24,7 @@
       font-size: 2em;
       margin: 0;
       line-height: 1.4em;
-      color: #1F4E79; /* 深蓝莫兰迪色 */
+      color: #1F4E79;
       font-weight: bold;
       text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.5);
     }
@@ -66,9 +66,6 @@
       background-color: #e2e7ec;
     }
     @media (max-width: 600px) {
-      header {
-        background-position: center center; /* 手机保持原图位置展示海与火山 */
-      }
       header h1 {
         font-size: 1.5em;
       }
