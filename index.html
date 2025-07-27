@@ -14,7 +14,7 @@
       color: #333;
     }
     header {
-      background-image: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url("vesuvio.jpg");
+      background-image: linear-gradient(rgba(0,0,0,0.10), rgba(0,0,0,0.10)), url("vesuvio.jpg");
       background-size: cover;
       background-position: center;
       color: white;
@@ -145,4 +145,12 @@
       document.getElementById('section-title-researcher').innerText = contentMap[lang].researcherTitle;
       document.getElementById('section-researcher').innerHTML = `<p>${contentMap[lang].researcher}</p>`;
 
-      doc
+      document.getElementById('footer-zh').style.display = lang === 'zh' ? 'block' : 'none';
+      document.getElementById('footer-it').style.display = lang === 'it' ? 'block' : 'none';
+      document.getElementById('footer-en').style.display = lang === 'en' ? 'block' : 'none';
+    }
+
+    window.onload = changeLanguage;
+  </script>
+</body>
+</html>
