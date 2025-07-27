@@ -14,18 +14,19 @@
       color: #333;
     }
     header {
-      background-image: linear-gradient(rgba(0,0,0,0.05), rgba(0,0,0,0.05)), url("vesuvio.jpg");
+      background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url("vesuvio.jpg");
       background-size: cover;
       background-position: center;
-      color: #2F3E46; /* 莫兰迪蓝灰色 */
       padding: 4em 2em;
       text-align: center;
     }
     header h1 {
-      font-size: 1.8em;
+      font-size: 2em;
       margin: 0;
       line-height: 1.4em;
-      text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.5);
+      color: #1F4E79; /* 深蓝莫兰迪色 */
+      font-weight: bold;
+      text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.5);
     }
     .container {
       max-width: 960px;
@@ -38,39 +39,39 @@
     h2 {
       font-size: 1.2em;
       margin-top: 2em;
-      color: #444;
+      color: #1F4E79;
     }
     .form-button {
       display: inline-block;
-      background-color: #d4af7f;
+      background-color: #5B8CBF;
       color: white;
-      padding: 0.8em 1.5em;
-      font-size: 1em;
+      padding: 1em 2em;
+      font-size: 1.1em;
       border: none;
       border-radius: 30px;
       text-decoration: none;
-      margin: 1.5em 0;
+      margin: 2em 0 3em;
       transition: background-color 0.3s, transform 0.3s;
     }
     .form-button:hover {
-      background-color: #b9936c;
-      transform: translateY(-2px);
+      background-color: #416b99;
+      transform: translateY(-3px);
     }
     footer {
       margin-top: 4em;
       padding: 2em 1em;
       text-align: center;
-      font-size: 0.9em;
-      color: #666;
-      background-color: #f0f0f0;
+      font-size: 1em;
+      color: #444;
+      background-color: #e2e7ec;
     }
     @media (max-width: 600px) {
       header h1 {
-        font-size: 1.4em;
+        font-size: 1.5em;
       }
       .form-button {
-        font-size: 0.95em;
-        padding: 0.7em 1.2em;
+        font-size: 1em;
+        padding: 0.8em 1.5em;
       }
     }
   </style>
@@ -100,15 +101,15 @@
 
   <footer id="footer">
     <div id="footer-zh">
-      联系邮箱：<a href="mailto:yanyan.zhang@unimore.it">yanyan.zhang@unimore.it</a><br>
+      联系邮箱：<strong><a href="mailto:yanyan.zhang@unimore.it">yanyan.zhang@unimore.it</a></strong><br>
       问卷填写截止时间：2025 年 8 月 25 日 23:45（罗马时间）
     </div>
     <div id="footer-it" style="display:none">
-      Email di contatto: <a href="mailto:yanyan.zhang@unimore.it">yanyan.zhang@unimore.it</a><br>
+      Email di contatto: <strong><a href="mailto:yanyan.zhang@unimore.it">yanyan.zhang@unimore.it</a></strong><br>
       Scadenza del questionario: 25 agosto 2025, ore 23:45 (ora di Roma)
     </div>
     <div id="footer-en" style="display:none">
-      Contact email: <a href="mailto:yanyan.zhang@unimore.it">yanyan.zhang@unimore.it</a><br>
+      Contact email: <strong><a href="mailto:yanyan.zhang@unimore.it">yanyan.zhang@unimore.it</a></strong><br>
       Deadline for submission: August 25, 2025, 11:45 PM (Rome time)
     </div>
   </footer>
