@@ -13,4 +13,136 @@
       background-color: #f8f8f8;
       color: #333;
     }
-    head
+    header {
+      background-image: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url("vesuvio.jpg");
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 4em 2em;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 1.8em;
+      margin: 0;
+      line-height: 1.4em;
+    }
+    .container {
+      max-width: 960px;
+      margin: 2em auto;
+      padding: 0 1em;
+    }
+    .lang-select {
+      margin-bottom: 2em;
+    }
+    h2 {
+      font-size: 1.2em;
+      margin-top: 2em;
+      color: #444;
+    }
+    .form-button {
+      display: inline-block;
+      background-color: #d4af7f;
+      color: white;
+      padding: 0.8em 1.5em;
+      font-size: 1em;
+      border: none;
+      border-radius: 30px;
+      text-decoration: none;
+      margin: 1.5em 0;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+    .form-button:hover {
+      background-color: #b9936c;
+      transform: translateY(-2px);
+    }
+    footer {
+      margin-top: 4em;
+      padding: 2em 1em;
+      text-align: center;
+      font-size: 0.9em;
+      color: #666;
+      background-color: #f0f0f0;
+    }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.4em;
+      }
+      .form-button {
+        font-size: 0.95em;
+        padding: 0.7em 1.2em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>费兰特在中国：读者采访<br>Elena Ferrante in Cina: interviste ai lettori</h1>
+  </header>
+  <div class="container">
+    <div class="lang-select">
+      <label for="lang">选择语言 / Seleziona lingua / Choose language: </label>
+      <select id="lang" onchange="changeLanguage()">
+        <option value="zh">中文</option>
+        <option value="it">Italiano</option>
+        <option value="en">English</option>
+      </select>
+    </div>
+
+    <div id="form-content" style="text-align: center;"></div>
+
+    <h2><i class="fas fa-book-open"></i> <span id="section-title-project"></span></h2>
+    <div id="section-project"></div>
+
+    <h2><i class="fas fa-user-graduate"></i> <span id="section-title-researcher"></span></h2>
+    <div id="section-researcher"></div>
+  </div>
+
+  <footer id="footer">
+    <div id="footer-zh">
+      联系邮箱：<a href="mailto:yanyan.zhang@unimore.it">yanyan.zhang@unimore.it</a><br>
+      问卷填写截止时间为 2025 年 8 月 25 日 23:45（罗马时间）
+    </div>
+    <div id="footer-it" style="display:none">
+      Email di contatto: <a href="mailto:yanyan.zhang@unimore.it">yanyan.zhang@unimore.it</a><br>
+      Scadenza del questionario: 25 agosto 2025, ore 23:45 (ora di Roma)
+    </div>
+    <div id="footer-en" style="display:none">
+      Contact email: <a href="mailto:yanyan.zhang@unimore.it">yanyan.zhang@unimore.it</a><br>
+      Deadline for submission: August 25, 2025, 11:45 PM (Rome time)
+    </div>
+  </footer>
+
+  <script>
+    const contentMap = {
+      zh: {
+        form: `感谢您参与本研究！请点击下方按钮填写问卷：<br><a class="form-button" href="https://forms.cloud.microsoft/e/U3YjYPLF1f?origin=lprLink" target="_blank">进入问卷</a>`,
+        projectTitle: "项目简介",
+        researcherTitle: "项目负责人",
+        project: `《费兰特在中国：姐妹情谊的书写、传递与重塑》是一项关于意大利作家埃莱娜·费兰特（Elena Ferrante）小说在中国的译介、接受与影响的学术研究。本系列采访是该研究的重要组成部分，聚焦中国读者的阅读经验与情感反应，探索“姐妹情谊”这一核心主题如何在跨文化语境中被理解、传达与改写。`,
+        researcher: `张燕燕，摩德纳与雷焦艾米利亚大学语言与文化系博士生。研究兴趣有意大利当代文学、女性主义批评、翻译研究、海洋文学。合译有《一个不属于我的名字》《成年人的谎言生活》《寻找伊莎贝尔》《最后的灯塔》等。`
+      },
+      it: {
+        form: `Grazie per aver partecipato alla nostra ricerca! Clicca il bottone qui sotto per compilare il questionario:<br><a class="form-button" href="https://forms.cloud.microsoft/e/U3YjYPLF1f?origin=lprLink" target="_blank">Vai al questionario</a>`,
+        projectTitle: "Descrizione del progetto",
+        researcherTitle: "Ricercatrice",
+        project: `<em>Ferrante in Cina: scrittura, trasmissione e rielaborazione della sorellanza</em> è una ricerca accademica sull'introduzione, la ricezione e l'impatto dei romanzi ferrantiani in Cina. Il progetto si concentra sull'esperienza di lettura delle lettrici e dei lettori cinesi e su come il tema della sorellanza venga recepito e trasformato in un contesto interculturale.`,
+        researcher: `Zhang Yanyan, dottoranda in Scienze Umanistiche presso il Dipartimento di Studi Linguistici e Culturali dell’Università di Modena e Reggio Emilia. I suoi interessi di ricerca comprendono letteratura italiana contemporanea, critica letteraria, studi della traduzione letteraria e la letteratura di mare. Opere tradotte: <em>Un nome che non è il mio</em>, <em>La vita bugiarda degli adulti</em>, <em>Per Isabel. Un mandala</em>, <em>L'ultimo faro</em>.`
+      },
+      en: {
+        form: `Thank you for participating in our research! Please click the button below to fill out the questionnaire:<br><a class="form-button" href="https://forms.cloud.microsoft/e/U3YjYPLF1f?origin=lprLink" target="_blank">Go to the questionnaire</a>`,
+        projectTitle: "Project Overview",
+        researcherTitle: "Researcher",
+        project: `<em>Ferrante in China: Writing, Transmission, and Reinterpretation of Sisterhood</em> is an academic study on the translation, reception, and cultural reinterpretation of Ferrante’s novels in China. The project focuses on Chinese readers’ experiences and how the theme of sisterhood is understood and reimagined across cultures.`,
+        researcher: `Zhang Yanyan, PhD candidate in Humanities at the Department of Linguistic and Cultural Studies, University of Modena and Reggio Emilia. Her research interests include contemporary Italian literature, literary criticism, literary translation, and ocean literature. Translated works: <em>Un nome che non è il mio</em>, <em>La vita bugiarda degli adulti</em>, <em>Per Isabel. Un mandala</em>, <em>L'ultimo faro</em>.`
+      }
+    };
+
+    function changeLanguage() {
+      const lang = document.getElementById('lang').value;
+      document.getElementById('form-content').innerHTML = contentMap[lang].form;
+      document.getElementById('section-title-project').innerText = contentMap[lang].projectTitle;
+      document.getElementById('section-project').innerHTML = `<p>${contentMap[lang].project}</p>`;
+      document.getElementById('section-title-researcher').innerText = contentMap[lang].researcherTitle;
+      document.getElementById('section-researcher').innerHTML = `<p>${contentMap[lang].researcher}</p>`;
+
+      doc
