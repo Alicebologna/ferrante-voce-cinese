@@ -16,7 +16,7 @@
     header {
       background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url("vesuvio.jpg");
       background-size: cover;
-      background-position: center;
+      background-position: center 30%; /* 电脑上将图片向上偏移以显示更多大海 */
       padding: 4em 2em;
       text-align: center;
     }
@@ -66,6 +66,9 @@
       background-color: #e2e7ec;
     }
     @media (max-width: 600px) {
+      header {
+        background-position: center center; /* 手机保持原图位置展示海与火山 */
+      }
       header h1 {
         font-size: 1.5em;
       }
